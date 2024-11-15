@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HLS Streaming</string>
+    <string name="title_diagnostics">Network Diagnostics</string>
+    <string name="action_network_profile">Network Profile</string>
+    <string name="action_diagnostics">Diagnostics</string>
+    <string name="error_load_streams">Failed to load streams. Pull to retry.</string>
+    <string name="label_buffering">Buffering…</string>
+</resources>

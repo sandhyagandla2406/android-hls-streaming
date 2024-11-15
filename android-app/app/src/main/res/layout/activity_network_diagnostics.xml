@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Profile picker -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Network Simulation Profile"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgNetworkProfiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton android:id="@+id/rbWifi"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wi-Fi (50 Mbps, 5ms)" android:checked="true" />
+                    <RadioButton android:id="@+id/rbLte"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4G LTE (20 Mbps, 30ms)" />
+                    <RadioButton android:id="@+id/rb3g"    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3G (2 Mbps, 100ms)" />
+                    <RadioButton android:id="@+id/rbPoor"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Poor (500 Kbps, 300ms)" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Active profile info -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Active Profile"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tvProfileName"  android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:text="Profile: -" />
+                <TextView android:id="@+id/tvBandwidth"    android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:text="Bandwidth: -" />
+                <TextView android:id="@+id/tvLatency"      android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:text="Latency: -" />
+                <TextView android:id="@+id/tvPacketLoss"   android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:text="Packet loss: -" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
